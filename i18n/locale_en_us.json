@@ -103,5 +103,6 @@
   "terrain":"Terrain",
   "iconItem":"Icon",
   "titleItem":"Title",
-  "infoWindowItem":"information window"
+  "infoWindowItem":"information window",
+  "inputId":"Input Id"
 }

@@ -103,5 +103,6 @@
   "terrain":"Relevo",
   "iconItem":"Ícone",
   "titleItem":"Título",
-  "infoWindowItem":"janela de informações"
+  "infoWindowItem":"janela de informações",
+  "inputId":"Id do Input"
 }
