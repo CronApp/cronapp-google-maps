@@ -8,7 +8,7 @@
     "includes": [
     {
       "file": "index.html",
-      "script": "plugins/cronapp-google-maps/components/cronapp-google-maps.cronapi.js",
+      "script": "plugins/cronapp-google-maps/cronapp-google-maps.cronapi.js",
       "type": "script"
     }
 	]
