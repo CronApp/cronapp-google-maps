@@ -239,9 +239,6 @@
    * @returns {ObjectType.OBJECT}
    */
   this.cronapi.maps.createLatLngPoint = function(  /** @type {ObjectType.STRING} @description {{latitude}} */ latitude, /** @type {ObjectType.STRING} @description {{lontitude}} */ lontitude) {
-      if(window.google){
-      return new google.maps.LatLng( latitude, lontitude );
-      }else
       return {'lat' : Number.parseFloat(latitude), 'lng' :Number.parseFloat(lontitude) };
   }
   
