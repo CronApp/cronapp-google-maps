@@ -73,40 +73,26 @@
       
     if(map[objectArray] === undefined) map[objectArray] = {};
     
-    switch(objectArray){
-      case 'markers':{
-        if(map[objectArray][objectId] === undefined){
-          map[objectArray][objectId] = new google.maps.Marker();
+    if(map[objectArray][objectId] === undefined){
+      switch(objectArray){
+        case 'markers':{
+            map[objectArray][objectId] = new google.maps.Marker();
         }
-        return map[objectArray][objectId];
-      }
-
-      case 'polylines':{
-        if(map[objectArray][objectId] === undefined){
-          map[objectArray][objectId] = new google.maps.Polyline();
+        case 'polylines':{
+            map[objectArray][objectId] = new google.maps.Polyline();
         }
-        return map[objectArray][objectId];
-      }
-
-      case 'circles':{
-        if(map[objectArray][objectId] === undefined){
-          map[objectArray][objectId] = new google.maps.Circle();
+        case 'circles':{
+            map[objectArray][objectId] = new google.maps.Circle();
         }
-        return map[objectArray][objectId];
-      }
-      case 'rectangles':{
-        if(map[objectArray][objectId] === undefined){
-          map[objectArray][objectId] = new google.maps.Rectangle();
+        case 'rectangles':{
+            map[objectArray][objectId] = new google.maps.Rectangle();
         }
-        return map[objectArray][objectId];
-      }
-      case 'polygons':{
-        if(map[objectArray][objectId] === undefined){
-          map[objectArray][objectId] = new google.maps.Polygon();
+        case 'polygons':{
+            map[objectArray][objectId] = new google.maps.Polygon();
         }
-        return map[objectArray][objectId];
       }
     }
+    return map[objectArray][objectId];
   }
   
   
@@ -238,8 +224,8 @@
    * @description {{createLatLngPointDescription}}
    * @returns {ObjectType.OBJECT}
    */
-  this.cronapi.maps.createLatLngPoint = function(  /** @type {ObjectType.STRING} @description {{latitude}} */ latitude, /** @type {ObjectType.STRING} @description {{lontitude}} */ lontitude) {
-      return {'lat' : Number.parseFloat(latitude), 'lng' :Number.parseFloat(lontitude) };
+  this.cronapi.maps.createLatLngPoint = function(  /** @type {ObjectType.STRING} @description {{latitude}} */ latitude, /** @type {ObjectType.STRING} @description {{longitude}} */ longitude) {
+      return {'lat' : Number.parseFloat(latitude), 'lng' :Number.parseFloat(longitude) };
   }
   
   /**
