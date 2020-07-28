@@ -66,34 +66,34 @@
         }
       }
   }
-  
 
-  // Internal function to maps that get or create variable from map
-  this.cronapi.maps.objectFromMap = function(map, objectArray, objectId){
-      
-    if(map[objectArray] === undefined) map[objectArray] = {};
-    
-    if(map[objectArray][objectId] === undefined){
-      switch(objectArray){
-        case 'markers':{
-            map[objectArray][objectId] = new google.maps.Marker();
+
+    // Internal function to maps that get or create variable from map
+    this.cronapi.maps.objectFromMap = function(map, objectArray, objectId){
+
+        if(map[objectArray] === undefined) map[objectArray] = {};
+
+        if(map[objectArray][objectId] === undefined){
+            switch(objectArray){
+                case 'markers':
+                    map[objectArray][objectId] = new google.maps.Marker();
+                    break;
+                case 'polylines':
+                    map[objectArray][objectId] = new google.maps.Polyline();
+                    break;
+                case 'circles':
+                    map[objectArray][objectId] = new google.maps.Circle();
+                    break;
+                case 'rectangles':
+                    map[objectArray][objectId] = new google.maps.Rectangle();
+                    break;
+                case 'polygons':
+                    map[objectArray][objectId] = new google.maps.Polygon();
+                    break;
+            }
         }
-        case 'polylines':{
-            map[objectArray][objectId] = new google.maps.Polyline();
-        }
-        case 'circles':{
-            map[objectArray][objectId] = new google.maps.Circle();
-        }
-        case 'rectangles':{
-            map[objectArray][objectId] = new google.maps.Rectangle();
-        }
-        case 'polygons':{
-            map[objectArray][objectId] = new google.maps.Polygon();
-        }
-      }
+        return map[objectArray][objectId];
     }
-    return map[objectArray][objectId];
-  }
   
   
   /**
