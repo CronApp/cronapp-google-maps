@@ -1,14 +1,14 @@
 {
   "copies": [
     {
-      "from": "plugins/cronapp-google-maps/components/components-cronapp-google-maps.json",
+      "from": "node_modules/cronapp-google-maps/components/components-cronapp-google-maps.json",
       "to": "${JAVA_HOME}/META-INF/components-cronapp-google-maps.json"
     }
   ],
     "includes": [
     {
       "file": "index.html",
-      "script": "plugins/cronapp-google-maps/cronapp-google-maps.cronapi.js",
+      "script": "node_modules/cronapp-google-maps/cronapp-google-maps.cronapi.js",
       "type": "script"
     }
 	]

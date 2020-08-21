@@ -1,6 +1,6 @@
 {
   "name": "cronapp-google-maps",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Google maps Javascript library for CronApp's users",
   "main": "cronapp-google-maps.cronapi.js",
   "scripts": {
