@@ -185,7 +185,7 @@
         return map.markers[markerId].getPosition().lng();
       }
       case 'icon':{
-        return map._map.markers[markerId].getIcon();
+        return map.markers[markerId].getIcon();
       }
       case 'title':{
         return map.markers[markerId].getTitle();
